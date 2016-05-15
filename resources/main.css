@@ -1,0 +1,563 @@
+/********************************  Variables  *********************************/
+/**********************************  Resets  **********************************/
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+span, ul, li {
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+em {
+  font-style: normal;
+}
+
+/**********************************  Fonts  ***********************************/
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
+}
+/**********************************  Common  **********************************/
+body {
+  font-family: "Gotham Light";
+  -webkit-font-smoothing: antialiased;
+}
+
+em {
+  font-family: "Gotham Regular";
+}
+
+b {
+  font-family: "Gotham Bold";
+  font-weight: 800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gotham Light";
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+a, a:visited {
+  color: #0088cc;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  7% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  9% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  11% {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+  12% {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
+  13% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  7% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  9% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  11% {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+  12% {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
+  13% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/************************************ Main ************************************/
+#Hero {
+  height: 100%;
+  height: 100vh;
+  max-height: 800px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+#Hero__Window {
+  height: inherit;
+  max-height: inherit;
+}
+#Hero__Window video {
+  height: inherit;
+  max-height: inherit;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -100;
+}
+
+#Hero__Overlay {
+  position: absolute;
+  top: 0;
+  height: inherit;
+  max-height: inherit;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+#Hero__Intro {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  max-height: inherit;
+  width: 100%;
+  color: white;
+}
+#Hero__Intro > nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  z-index: 100;
+}
+#Hero__Intro > nav ul {
+  margin: 20px 40px;
+}
+#Hero__Intro > nav li {
+  margin: 13.33333px;
+}
+#Hero__Intro > nav a {
+  color: white;
+}
+#Hero__Intro > span {
+  margin-bottom: 40px;
+}
+#Hero__Intro > span {
+  -webkit-animation: 6s 8s bounce 3;
+          animation: 6s 8s bounce 3;
+  opacity: 0.5;
+}
+#Hero__Intro > span > i {
+  font-size: 2.5em;
+}
+
+#Hero__Logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: -80px 40px 40px 40px;
+}
+#Hero__Logo hgroup {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#Hero__Logo hgroup b {
+  font-family: "Gotham Bold";
+  font-weight: 800;
+  color: #dff8c1;
+}
+
+#Hero__LogoEmblem {
+  font-size: 4.32em;
+  margin: 20px;
+}
+
+#Hero__LogoTitle {
+  font-family: "Gotham Regular";
+  font-size: 2.4em;
+}
+
+#Hero__LogoAnthem {
+  margin-top: 40px;
+  font-family: "Gotham Bold";
+  font-weight: 800;
+  font-size: 1.92em;
+}
+
+.PanoramicCard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 0 40px 0;
+  padding: 40px 0 40px 0;
+}
+
+.PanoramicCard__DescriptionBox {
+  margin: 40px 0 40px 0;
+}
+
+.PanoramicCard__Description {
+  font-family: "Gotham Thin";
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.92em;
+}
+.PanoramicCard__Description b {
+  color: #4d4d4d;
+}
+
+.PanoramicCard__PictureBox {
+  width: 100%;
+  margin: 40px 0 40px 0;
+}
+
+.PanoramicCard__FitPictureBox {
+  max-width: 800px;
+}
+
+.PanoramicCard__Picture > img {
+  width: 100%;
+  opacity: 0.9;
+}
+
+.ExpositionCard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 0 40px 0;
+  padding: 40px 0 40px 0;
+}
+
+.ExpositionCard__Box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 0 40px 0;
+  padding: 40px 0 40px 0;
+  width: 100%;
+  margin: 0;
+  background-color: #f7f5f1;
+}
+
+.ExpositionCard__Header > h2 {
+  font-family: "Gotham Thin";
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.92em;
+  font-size: 2.304em;
+}
+.ExpositionCard__Header > h2 b {
+  color: #4d4d4d;
+}
+
+.ExpositionCard__Body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  max-width: 1000px;
+  margin: 40px auto 40px auto;
+  padding: 40px 0 40px 0;
+}
+
+.ExpositionCard__Section {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-basis: 0;
+      -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+  margin: 0 20px 0 20px;
+  text-align: center;
+}
+.ExpositionCard__Section > span {
+  height: 80px;
+}
+.ExpositionCard__Section > span > i {
+  font-size: 64px;
+  color: #91c646;
+}
+.ExpositionCard__Section > h3 {
+  font-family: "Gotham Regular";
+  color: #4d4d4d;
+  margin-bottom: 10px;
+  font-size: 18pt;
+}
+.ExpositionCard__Section > p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.ExpositionCard__Footer > nav > a {
+  font-size: 1.536em;
+}
+
+.SideCard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px 0 40px 0;
+  padding: 40px 0 40px 0;
+}
+
+.SideCard__PictureBox {
+  width: 100%;
+}
+
+.SideCard__Picture img {
+  width: 100%;
+  opacity: 0.9;
+}
+
+.SideCard__DescriptionBox {
+  font-family: "Gotham Thin";
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.92em;
+  max-width: 600px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin: 0 40px 0 40px;
+  padding: 0 40px 0 40px;
+  text-align: start;
+}
+.SideCard__DescriptionBox b {
+  color: #4d4d4d;
+}
+
+.SideCard__Spacer {
+  width: 100%;
+}
+
+#Villain {
+  background-color: #353a45;
+  text-align: center;
+}
+#Villain * {
+  color: #a2a2a2;
+}
+
+#Villain__Studio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  max-width: 1000px;
+  margin: 40px auto 40px auto;
+  padding: 40px 0 40px 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Villain__Studio > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-basis: 0;
+      -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+}
+#Villain__Studio li {
+  display: list-item;
+  margin: 10px 0 10px 0;
+}
+
+#Villain__Map ul {
+  text-align: start;
+}
+
+#Villain__Brand {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Villain__Brand > * {
+  margin: 5px 0 5px 0;
+}
+
+#Villain__Logo {
+  font-size: 64px;
+}
+
+#Villain__Artist {
+  padding: 20px 0 20px 0;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+#Villain__Artist a {
+  text-decoration: underline;
+}
+
+/**************************************|***************************************/
