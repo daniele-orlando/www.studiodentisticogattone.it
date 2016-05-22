@@ -4,7 +4,7 @@ html, body {
   width: 100%;
   height: 100%;
   font-size: 1em;
-  color: black;
+  color: #333;
 }
 
 * {
@@ -67,7 +67,6 @@ b {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Gotham Light";
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 a, a:visited {
@@ -138,12 +137,16 @@ a, a:visited {
   }
 }
 /************************************ Main ************************************/
+.Spacer {
+  padding: 40px 0 40px 0;
+}
+
 #Hero {
   height: 100%;
   height: 100vh;
   max-height: 800px;
   margin-bottom: 40px;
-  padding-bottom: 40px;
+  background-color: #566d6b;
 }
 
 #Hero__Window {
@@ -166,7 +169,11 @@ a, a:visited {
   max-height: inherit;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.2;
+}
+.it-has-no-video #Hero__Overlay,
+#Hero__Overlay .it-has-touchevents {
+  opacity: 0.4;
 }
 
 #Hero__Intro {
@@ -176,6 +183,9 @@ a, a:visited {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: inherit;
+  max-height: inherit;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -185,9 +195,6 @@ a, a:visited {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  height: inherit;
-  max-height: inherit;
-  width: 100%;
   color: white;
 }
 #Hero__Intro > nav {
@@ -217,11 +224,10 @@ a, a:visited {
 }
 #Hero__Intro > nav a {
   color: white;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 #Hero__Intro > span {
   margin-bottom: 40px;
-}
-#Hero__Intro > span {
   -webkit-animation: 6s 8s bounce 3;
           animation: 6s 8s bounce 3;
   opacity: 0.5;
@@ -249,33 +255,35 @@ a, a:visited {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  margin: -80px 40px 40px 40px;
+  margin: -40px 40px 40px 40px;
+  letter-spacing: -0.1em;
 }
-#Hero__Logo hgroup {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-#Hero__Logo hgroup b {
+#Hero__Logo b {
   font-family: "Gotham Bold";
   font-weight: 800;
   color: #dff8c1;
 }
 
+#Hero__LogoLogo {
+  text-align: center;
+}
+
 #Hero__LogoEmblem {
   font-size: 4.32em;
-  margin: 20px;
 }
 
 #Hero__LogoTitle {
   font-family: "Gotham Regular";
   font-size: 2.4em;
+  text-transform: uppercase;
+}
+#Hero__LogoTitle > * {
+  display: block;
 }
 
 #Hero__LogoAnthem {
   margin-top: 40px;
-  font-family: "Gotham Bold";
-  font-weight: 800;
+  font-family: "Gotham Regular";
   font-size: 1.92em;
 }
 
@@ -297,8 +305,6 @@ a, a:visited {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px 0 40px 0;
-  padding: 40px 0 40px 0;
 }
 
 .PanoramicCard__DescriptionBox {
@@ -312,12 +318,12 @@ a, a:visited {
   font-size: 1.92em;
 }
 .PanoramicCard__Description b {
-  color: #4d4d4d;
+  color: #333;
 }
 
 .PanoramicCard__PictureBox {
   width: 100%;
-  margin: 40px 0 40px 0;
+  margin: 40px 0 0 0;
 }
 
 .PanoramicCard__FitPictureBox {
@@ -327,6 +333,7 @@ a, a:visited {
 .PanoramicCard__Picture > img {
   width: 100%;
   opacity: 0.9;
+  margin-bottom: -3px;
 }
 
 .ExpositionCard {
@@ -347,8 +354,6 @@ a, a:visited {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px 0 40px 0;
-  padding: 40px 0 40px 0;
 }
 
 .ExpositionCard__Box {
@@ -369,8 +374,6 @@ a, a:visited {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px 0 40px 0;
-  padding: 40px 0 40px 0;
   width: 100%;
   margin: 0;
   background-color: #f7f5f1;
@@ -384,7 +387,22 @@ a, a:visited {
   font-size: 2.304em;
 }
 .ExpositionCard__Header > h2 b {
-  color: #4d4d4d;
+  color: #333;
+}
+.ExpositionCard__Header > span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-top: 40px;
+  height: 80px;
+}
+.ExpositionCard__Header > span > i {
+  font-size: 64px;
+  color: #91c646;
 }
 
 .ExpositionCard__Body {
@@ -396,7 +414,6 @@ a, a:visited {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   max-width: 1000px;
-  margin: 40px auto 40px auto;
   padding: 40px 0 40px 0;
 }
 
@@ -423,13 +440,15 @@ a, a:visited {
 }
 .ExpositionCard__Section > h3 {
   font-family: "Gotham Regular";
-  color: #4d4d4d;
+  color: #333;
   margin-bottom: 10px;
-  font-size: 18pt;
+  font-size: 1.536em;
 }
 .ExpositionCard__Section > p {
-  text-align: justify;
+  text-align: center;
   line-height: 1.5;
+  font-size: 1.344em;
+  letter-spacing: -0.01em;
 }
 
 .ExpositionCard__Footer > nav > a {
@@ -472,7 +491,7 @@ a, a:visited {
   text-align: start;
 }
 .SideCard__DescriptionBox b {
-  color: #4d4d4d;
+  color: #333;
 }
 
 .SideCard__Spacer {
@@ -496,12 +515,13 @@ a, a:visited {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   max-width: 1000px;
-  margin: 40px auto 40px auto;
   padding: 40px 0 40px 0;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 #Villain__Studio > * {
   -webkit-box-flex: 1;
@@ -517,7 +537,7 @@ a, a:visited {
 }
 #Villain__Studio li {
   display: list-item;
-  margin: 10px 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
 #Villain__Map ul {
@@ -558,6 +578,10 @@ a, a:visited {
 }
 #Villain__Artist a {
   text-decoration: underline;
+}
+
+#Map {
+  height: 400px;
 }
 
 /**************************************|***************************************/

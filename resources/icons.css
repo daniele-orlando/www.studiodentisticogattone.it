@@ -29,6 +29,7 @@
 .Icon-logo:before,
 .Icon-mouth:before,
 .Icon-teeth:before,
+.Icon-tooth:before,
 .Icon-tooth-health:before {
   display: inline-block;
   font-family: "icons";
@@ -50,4 +51,5 @@
 .Icon-logo:before { content: "\f103"; }
 .Icon-mouth:before { content: "\f104"; }
 .Icon-teeth:before { content: "\f105"; }
-.Icon-tooth-health:before { content: "\f106"; }
+.Icon-tooth:before { content: "\f106"; }
+.Icon-tooth-health:before { content: "\f107"; }
