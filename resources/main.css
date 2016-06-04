@@ -1,39 +1,4 @@
-/********************************  Variables  *********************************/
-/**********************************  Resets  **********************************/
-html, body {
-  width: 100%;
-  height: 100%;
-  font-size: 1em;
-  color: #333;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-span, ul, li {
-  display: inline-block;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-em {
-  font-style: normal;
-}
-
-/**********************************  Fonts  ***********************************/
+/**********************************  Main  ************************************/
 @font-face {
   font-family: 'Gotham Thin';
   src: url("Gotham-Thin.ttf") format("truetype");
@@ -50,13 +15,56 @@ em {
   font-family: 'Gotham Bold';
   src: url("Gotham-Bold.ttf") format("truetype");
 }
-/**********************************  Common  **********************************/
-body {
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  font-size: 1em;
   font-family: "Gotham Light";
   -webkit-font-smoothing: antialiased;
+  color: #333;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  html, body {
+    font-size: 0.8em;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gotham Light";
+}
+
+span, ul, li {
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a, a:visited {
+  color: #0088cc;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 em {
+  font-style: normal;
   font-family: "Gotham Regular";
 }
 
@@ -65,12 +73,228 @@ b {
   font-weight: 800;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Gotham Light";
+.HBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  width: 100%;
 }
 
-a, a:visited {
-  color: #0088cc;
+.VBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.Spacer {
+  padding: 40px 20px 0 0;
+}
+
+@media screen and (min-width: 800px) {
+  .Spacer {
+    padding-right: 40px;
+  }
+}
+.Spacer-S {
+  padding: 20px 20px 0 0;
+}
+
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
+}
+.BusinessCard {
+  background-color: white;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 0.4em;
+}
+.BusinessCard i {
+  font-size: 4.32em;
+}
+
+@media screen and (min-width: 800px) {
+  .BusinessCard {
+    width: 800px;
+  }
+}
+.BusinessCard__Title {
+  font-size: 2.4em;
+  color: blue;
+}
+
+.BusinessCard__Entry {
+  font-size: 1.4em;
+}
+
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
+}
+.ExpositionCard,
+.WideExpositionCard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ExpositionCard__Box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Gotham Thin";
+  text-align: center;
+  font-size: 1.92em;
+}
+
+.ExpositionCard__Box > img,
+.WideExpositionCard__Box > img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .ExpositionCard {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .WideExpositionCard {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#Card1__Emblems {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+}
+#Card1__Emblems > i {
+  font-size: 64px;
+  color: #91c646;
+}
+
+#Card1__Description p {
+  font-family: "Gotham Light";
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 0.65em;
+  letter-spacing: -0.01em;
 }
 
 @-webkit-keyframes bounce {
@@ -136,326 +360,41 @@ a, a:visited {
             transform: translateY(0);
   }
 }
-/************************************ Main ************************************/
-.Spacer {
-  padding: 40px 0 40px 0;
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
 }
-
-#Hero {
-  height: 100%;
-  height: 100vh;
-  max-height: 800px;
-  margin-bottom: 40px;
-  background-color: #566d6b;
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
 }
-
-#Hero__Window {
-  height: inherit;
-  max-height: inherit;
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
 }
-#Hero__Window video {
-  height: inherit;
-  max-height: inherit;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -100;
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
 }
-
-#Hero__Overlay {
-  position: absolute;
-  top: 0;
-  height: inherit;
-  max-height: inherit;
-  width: 100%;
-  background-color: black;
-  opacity: 0.2;
-}
-.it-has-no-video #Hero__Overlay,
-#Hero__Overlay .it-has-touchevents {
-  opacity: 0.4;
-}
-
-#Hero__Intro {
-  position: absolute;
-  top: 0;
+#Hero__Nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: inherit;
-  max-height: inherit;
-  width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-}
-#Hero__Intro > nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 100%;
-  z-index: 100;
+  font-size: 1.2em;
 }
-#Hero__Intro > nav ul {
+#Hero__Nav ul {
   margin: 20px 40px;
 }
-#Hero__Intro > nav li {
-  margin: 13.33333px;
-}
-#Hero__Intro > nav a {
-  color: white;
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-}
-#Hero__Intro > span {
-  margin-bottom: 40px;
-  -webkit-animation: 6s 8s bounce 3;
-          animation: 6s 8s bounce 3;
-  opacity: 0.5;
-}
-#Hero__Intro > span > i {
-  font-size: 2.5em;
+#Hero__Nav li {
+  margin: 5px 10px;
 }
 
-#Hero__Logo {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  margin: -40px 40px 40px 40px;
-  letter-spacing: -0.1em;
-}
-#Hero__Logo b {
-  font-family: "Gotham Bold";
-  font-weight: 800;
-  color: #dff8c1;
-}
-
-#Hero__LogoLogo {
-  text-align: center;
-}
-
-#Hero__LogoEmblem {
-  font-size: 4.32em;
-}
-
-#Hero__LogoTitle {
-  font-family: "Gotham Regular";
-  font-size: 2.4em;
-  text-transform: uppercase;
-}
-#Hero__LogoTitle > * {
-  display: block;
-}
-
-#Hero__LogoAnthem {
-  margin-top: 40px;
-  font-family: "Gotham Regular";
-  font-size: 1.92em;
-}
-
-.PanoramicCard {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.PanoramicCard__DescriptionBox {
-  margin: 40px 0 40px 0;
-}
-
-.PanoramicCard__Description {
-  font-family: "Gotham Thin";
-  max-width: 800px;
-  text-align: center;
-  font-size: 1.92em;
-}
-.PanoramicCard__Description b {
-  color: #333;
-}
-
-.PanoramicCard__PictureBox {
-  width: 100%;
-  margin: 40px 0 0 0;
-}
-
-.PanoramicCard__FitPictureBox {
-  max-width: 800px;
-}
-
-.PanoramicCard__Picture > img {
-  width: 100%;
-  opacity: 0.9;
-  margin-bottom: -3px;
-}
-
-.ExpositionCard {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.ExpositionCard__Box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  margin: 0;
-  background-color: #f7f5f1;
-}
-
-.ExpositionCard__Header > h2 {
-  font-family: "Gotham Thin";
-  max-width: 800px;
-  text-align: center;
-  font-size: 1.92em;
-  font-size: 2.304em;
-}
-.ExpositionCard__Header > h2 b {
-  color: #333;
-}
-.ExpositionCard__Header > span {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  margin-top: 40px;
-  height: 80px;
-}
-.ExpositionCard__Header > span > i {
-  font-size: 64px;
-  color: #91c646;
-}
-
-.ExpositionCard__Body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  max-width: 1000px;
-  padding: 40px 0 40px 0;
-}
-
-.ExpositionCard__Section {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  -webkit-flex-basis: 0;
-      -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-  margin: 0 20px 0 20px;
-  text-align: center;
-}
-.ExpositionCard__Section > span {
-  height: 80px;
-}
-.ExpositionCard__Section > span > i {
-  font-size: 64px;
-  color: #91c646;
-}
-.ExpositionCard__Section > h3 {
-  font-family: "Gotham Regular";
-  color: #333;
-  margin-bottom: 10px;
-  font-size: 1.536em;
-}
-.ExpositionCard__Section > p {
-  text-align: center;
-  line-height: 1.5;
-  font-size: 1.344em;
-  letter-spacing: -0.01em;
-}
-
-.ExpositionCard__Footer > nav > a {
-  font-size: 1.536em;
-}
-
-.SideCard {
+#SuperHero {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -464,8 +403,219 @@ a, a:visited {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 40px 0 40px 0;
-  padding: 40px 0 40px 0;
+}
+#SuperHero a {
+  color: #333;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+#SuperHero #Hero__Nav {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+}
+#SuperHero #Hero__Logo {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#SuperHero #Hero__LogoEmblem {
+  font-size: 2em;
+  min-width: 1.5em;
+}
+#SuperHero #Hero__LogoLogo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 40px;
+}
+#SuperHero #Hero__LogoAnthem {
+  display: none;
+}
+
+#Hero {
+  height: 100%;
+  height: 100vh;
+  max-height: 800px;
+  background-color: #566d6b;
+}
+#Hero #Hero__Window {
+  height: inherit;
+  max-height: inherit;
+}
+#Hero #Hero__Window video {
+  height: inherit;
+  max-height: inherit;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -100;
+}
+#Hero #Hero__Overlay {
+  position: absolute;
+  top: 0;
+  height: inherit;
+  max-height: inherit;
+  width: 100%;
+  background-color: black;
+  opacity: 0.2;
+}
+.it-has-no-video #Hero #Hero__Overlay,
+#Hero #Hero__Overlay .it-has-touchevents {
+  opacity: 0.4;
+}
+#Hero #Hero__Nav {
+  width: 100%;
+  z-index: 100;
+}
+#Hero #Hero__Nav a {
+  color: white;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+#Hero #Hero__Intro {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  max-height: inherit;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+#Hero #Hero__Intro > span {
+  margin-bottom: 40px;
+  -webkit-animation: 6s 8s bounce 3;
+          animation: 6s 8s bounce 3;
+  opacity: 0.5;
+}
+#Hero #Hero__Intro > span > i {
+  font-size: 2.5em;
+}
+#Hero #Hero__Logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: 40px;
+  letter-spacing: -0.1em;
+}
+#Hero #Hero__Logo b {
+  font-family: "Gotham Bold";
+  font-weight: 800;
+  color: #dff8c1;
+}
+#Hero #Hero__LogoLogo {
+  text-align: center;
+}
+#Hero #Hero__LogoEmblem {
+  font-size: 4.32em;
+}
+#Hero #Hero__LogoTitle {
+  font-family: "Gotham Regular";
+  font-size: 2.4em;
+  text-transform: uppercase;
+}
+#Hero #Hero__LogoTitle > * {
+  display: block;
+}
+#Hero #Hero__LogoAnthem {
+  margin-top: 40px;
+  font-family: "Gotham Regular";
+  font-size: 1.92em;
+}
+
+.MapCard {
+  height: 400px;
+}
+
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
+}
+.PanoramicCard,
+.PanoramicCard__Box > img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.PanoramicCard__Box > img {
+  opacity: 0.9;
+}
+
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
+}
+.SideCard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 
 .SideCard__PictureBox {
@@ -479,25 +629,35 @@ a, a:visited {
 
 .SideCard__DescriptionBox {
   font-family: "Gotham Thin";
-  max-width: 800px;
   text-align: center;
   font-size: 1.92em;
   max-width: 600px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  margin: 0 40px 0 40px;
-  padding: 0 40px 0 40px;
   text-align: start;
-}
-.SideCard__DescriptionBox b {
-  color: #333;
 }
 
 .SideCard__Spacer {
   width: 100%;
 }
 
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url("Gotham-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("Gotham-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url("Gotham-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("Gotham-Bold.ttf") format("truetype");
+}
 #Villain {
   background-color: #353a45;
   text-align: center;
@@ -506,7 +666,7 @@ a, a:visited {
   color: #a2a2a2;
 }
 
-#Villain__Studio {
+#Villain__Business {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -514,28 +674,16 @@ a, a:visited {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  max-width: 1000px;
-  padding: 40px 0 40px 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
-  margin-right: auto;
 }
-#Villain__Studio > * {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  -webkit-flex-basis: 0;
-      -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-}
-#Villain__Studio li {
+#Villain__Business li {
   display: list-item;
   margin: 0 0 10px 0;
 }
@@ -578,10 +726,6 @@ a, a:visited {
 }
 #Villain__Artist a {
   text-decoration: underline;
-}
-
-#Map {
-  height: 400px;
 }
 
 /**************************************|***************************************/
