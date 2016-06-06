@@ -170,7 +170,33 @@
         <script src="/resources/modernizr.js"></script>
         <script src="/resources/main.js"></script>
 
-        <script>
+        <script type="application/ld+json">
+            {
+                "@context":  "http://schema.org",
+                "@type":     "LocalBusiness",
+                "name":      "Studio Dentistico Gattone",
+                "telephone": "0871 82253",
+                "email":     "info@studiogattone.it",
+                "address": {
+                    "@type":           "PostalAddress",
+                    "streetAddress":   "Via Marrucina, 128",
+                    "addressLocality": "Guardiagrele (Chieti)",
+                    "addressRegion":   "Abruzzo",
+                    "addressCountry":  "Italia",
+                    "postalCode":      "66016"
+                },
+                "openingHoursSpecification": {
+                    "@type":     "OpeningHoursSpecification",
+                    "dayOfWeek": {
+                        "@type": "DayOfWeek",
+                        "name":  "Lunedì, Martedì, Mercoledì, Giovedì, Venerdì"
+                },
+                "opens":  "09:00",
+                "closes": "20:00"
+                }
+            }
+            </script>
+            <script>
             // <![CDATA[
             if (location.hostname === '127.0.0.1') {
                 var url = 'http://{host}:3000/browser-sync/browser-sync-client.js'
