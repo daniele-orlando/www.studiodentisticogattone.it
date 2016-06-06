@@ -1,14 +1,13 @@
 ;(function (undefined) {
         'use strict'
 
-        var go = function () {
+        var playVideoHandler = function () {
                 var video = document.getElementsByTagName('video')[0]
+                video.play()
+                document.removeEventListener('touchstart', playVideoHandler)
+        }
 
-                var playVideoHandler = function() {
-                        video.play()
-                        document.removeEventListener('touchstart', playVideoHandler)
-                }
-
+        var go = function () {
                 document.addEventListener('touchstart', playVideoHandler)
         }
 
