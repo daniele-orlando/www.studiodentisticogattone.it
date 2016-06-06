@@ -151,7 +151,7 @@ b {
   src: url("Gotham-Bold.ttf") format("truetype");
 }
 .BusinessCard {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
   width: 90%;
   margin-left: auto;
@@ -177,6 +177,18 @@ b {
   font-size: 1.4em;
 }
 
+.ContactCard {
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 800px) {
+  .ContactCard {
+    display: block;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @font-face {
   font-family: 'Gotham Thin';
   src: url("Gotham-Thin.ttf") format("truetype");
